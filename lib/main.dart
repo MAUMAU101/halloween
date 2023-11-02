@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:triki_triki2/config/router/app_router.dart';
 import 'package:triki_triki2/config/theme/app_theme.dart';
-import 'package:triki_triki2/presentation/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: AppTheme(selectedColor: 4).theme(),
-      home: const HomeScreen(),
+     // home: const HomeScreen(),
+      routerConfig: appRouter,
     );
   }
 }

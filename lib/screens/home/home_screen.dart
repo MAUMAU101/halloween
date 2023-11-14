@@ -43,9 +43,7 @@ return ListTile(
       title: Text(menuItem.title),
       subtitle: Text(menuItem.subTitle),
       onTap: () {
-        //context.go(menuItem.link);
-        //context.push(menuItem.link);
-        context.pushNamed(menuItem.screenName);
+        context.push(menuItem.link);
       },
     );
   }

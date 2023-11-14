@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:triki_triki2/presentation/widgets/button.dart';
+import 'package:triki_triki2/presentation/buttons/custom_button.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String screenName = 'button_screen';
@@ -17,7 +17,7 @@ class ButtonsScreen extends StatelessWidget {
           onPressed: () {
             context.pop();
           },
-          child: const Icon(Icons.arrow_back_ios_new_rounded)),
+          child: const Icon(Icons.arrow_circle_left_outlined)),
     );
   }
 }
@@ -62,7 +62,7 @@ class _ButtonsView extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.app_registration_rounded)),
-              const button(),
+              const Button(),
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.app_registration_outlined),

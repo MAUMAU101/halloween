@@ -26,7 +26,7 @@ GoRoute(
 ),
 GoRoute(
   path: '/snackbars',
-  name: SnackBarScreen.screeName,
+  name: SnackBarScreen.screenName,
   builder: (BuildContext context, GoRouterState state) => const SnackBarScreen(),
 ),
 

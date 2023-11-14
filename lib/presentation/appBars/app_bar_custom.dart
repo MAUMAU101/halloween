@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 mixin AppBarCustom{
-  AppBar appBarWithoutReturnButton({String title = 'no tiene Titulo'}) =>
+  AppBar appBarWithoutReturnButton({String title = 'no tiene Titulo', required BuildContext context}) =>
       AppBar(
         title: Text(title),
         automaticallyImplyLeading:

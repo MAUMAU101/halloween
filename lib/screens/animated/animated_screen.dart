@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math' show Random;
 import 'package:triki_triki2/presentation/widgets/widgets.dart';
-
+// last commit to update git
 class AnimatedScreen extends StatefulWidget {
   static const name = 'animated_screen';
+
   const AnimatedScreen({super.key});
 
   @override

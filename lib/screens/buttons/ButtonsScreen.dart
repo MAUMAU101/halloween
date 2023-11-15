@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:triki_triki2/presentation/buttons/custom_button.dart';
+import 'package:triki_triki2/presentation/widgets/widgets.dart';
 
-class ButtonsScreen extends StatelessWidget {
+
+class ButtonsScreen extends StatelessWidget with AppBarCustom {
   static const String screenName = 'button_screen';
   const ButtonsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Buttons Screen'),
-      ),
+      appBar: appBarWithOutReturnButton(title: 'Buttons Screen'),
       body: const _ButtonsView(),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            context.pop();
-          },
-          child: const Icon(Icons.arrow_circle_left_outlined)),
+      floatingActionButton: const ButtonReturnPage(),
     );
   }
 }
@@ -62,7 +56,7 @@ class _ButtonsView extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.app_registration_rounded)),
-              const Button(),
+              const CustomButton(),
               IconButton(
                 onPressed: () {},
                 icon: const Icon(Icons.app_registration_outlined),

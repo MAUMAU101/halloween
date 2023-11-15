@@ -13,7 +13,7 @@ class SnackBarScreen extends StatelessWidget
       appBar: appBarWithReturnButton(title: 'Snackbars y Diálogos'),
       floatingActionButton: FloatingActionButton.extended(
           onPressed: () => toShowSnackBarCustom(context,
-              snackBarContent: const Text('Hola Ramon')),
+              snackBarContent: const Text('Maurilio')),
           label: const Text('Mostrar SnackBar'),
           icon: const Icon(Icons.remove_red_eye_outlined)),
       body: const Center(child: _ShowButtonsList()),

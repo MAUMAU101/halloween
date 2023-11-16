@@ -4,4 +4,5 @@ import 'package:triki_triki2/config/router/list_router.dart';
 
 final GoRouter appRouter = GoRouter(
   routes: routes,
-  debugLogDiagnostics: true,);
+  debugLogDiagnostics: true,
+  );

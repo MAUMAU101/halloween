@@ -4,11 +4,10 @@ mixin AppBarCustom {
       AppBar(
         title: Text(title),
         automaticallyImplyLeading:
-            false, // Establece esto en false para ocultar el botón de retorno
+            false,
       );
   AppBar appBarWithReturnButton({String title = 'no tiene Titulo'}) => AppBar(
         title: Text(
-            title), // Establece esto en false para ocultar el botón de retorno
-      );
-
+            title),
+  );
 }

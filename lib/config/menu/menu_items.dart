@@ -22,7 +22,6 @@ List<MenuItem> appMenuItems = <MenuItem>[
       icon: Icons.smart_button_outlined
       ),
 
-
   const MenuItem(
       title: 'Tarjetas',
       subTitle: 'un contenedor estilizado',
@@ -45,7 +44,7 @@ List<MenuItem> appMenuItems = <MenuItem>[
         title: 'UI Controls + Tiles',
         subTitle: 'Una serie de controles de flutter',
         link: '/ui-control',
-        icon: Icons.car_rental_outlined),
+        icon: Icons.check_box_outline_blank_rounded),
 
       const MenuItem(
         title: 'Introduccion a la aplicacion',
@@ -58,4 +57,16 @@ List<MenuItem> appMenuItems = <MenuItem>[
         subTitle: 'Listas Infinitas y pull to refresh',
         link: '/infinate',
         icon: Icons.list_alt_rounded),
+
+    //GoRoute(
+    //path: '/counter-river',
+    //name: CounterScreen.name,
+    //builder: (context, state) => const CounterScreen(),
+  //),
+
+        const MenuItem(
+          title: 'Cambiar tema',
+          subTitle: 'Cambiar tema de la aplicación',
+                link: '/theme-changer',
+      icon: Icons.color_lens_outlined),
 ];

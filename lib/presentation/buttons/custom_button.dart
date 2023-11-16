@@ -11,12 +11,12 @@ class CustomButton extends StatelessWidget {
       child: Material(
         // color: Colors.blue,
         color: colors.primary,
-        child: InkWell(
-          onTap: () {},
+        child:  InkWell(
+      onTap: () {},
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             child: Text(
-              'Hola mudo0000',
+              'Hola mudo',
               style: TextStyle(color: Colors.white),
             ),
           ),

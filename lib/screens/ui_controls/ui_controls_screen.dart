@@ -36,16 +36,16 @@ Widget build(BuildContext context) {
     physics: const ClampingScrollPhysics(),
     children: [
       SwitchListTile(
-        title: const Text(' developerMode'),
+        title: const Text(' DeveloperMode'),
         subtitle: const Text('Controles adicionales'),
         value: isDeveloper,
         onChanged: (value) => setState((){
           isDeveloper = !isDeveloper;
         }),
       ),
-      ExpansionTile(
+        ExpansionTile(
         title: const Text('Vehiculo de Transporte'),
-        subtitle: Text('$selectedTransportation'),
+        subtitle: const Text('Elige tu Transporte'),
         children: [
         RadioListTile(
         title:  const Text('by car'),
@@ -85,14 +85,14 @@ Widget build(BuildContext context) {
             ),
           ],
         ),
-        CheckboxListTile(
+          CheckboxListTile(
           title: const Text('¿Desayuno?'),
           value: wantsBreakFast,
           onChanged: (value) => setState(() {
             wantsBreakFast = !wantsBreakFast;
           }),
           ),
-                  CheckboxListTile(
+          CheckboxListTile(
           title: const Text('Almuerzo?'),
           value: wantsLunch,
           onChanged: (value) => setState(() {
@@ -103,8 +103,8 @@ Widget build(BuildContext context) {
           title: const Text('Cena?'),
           value: wantsDinner,
           onChanged: (value) => setState(() {
-            wantsLunch = !wantsDinner;
-                      }),
+            wantsDinner = !wantsDinner;
+          }),
         ),
       ],
     );

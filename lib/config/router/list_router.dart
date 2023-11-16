@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:triki_triki2/screens/app_tutorial/app_tutorial_screen.dart';
-import 'package:triki_triki2/screens/animated/animated_screen.dart';
-import 'package:triki_triki2/screens/infinate_scroll/infinate_scroll_screen.dart';
 import 'package:triki_triki2/screens/screens.dart';
-import 'package:triki_triki2/screens/progress/progress_screen.dart';
-import 'package:triki_triki2/screens/snackbar/snackbar_screen.dart';
-import 'package:triki_triki2/screens/ui_controls/ui_controls_screen.dart';
 
 final List<RouteBase> routes = [
   GoRoute(
@@ -53,5 +47,10 @@ final List<RouteBase> routes = [
     path: '/infinate',
     name: InfiniteScrollScreen.screenName,
     builder: (context, state) => const InfiniteScrollScreen(),
+  ),
+    GoRoute(
+    path: '/theme-changer',
+    name: ThemeChangerScreen.name,
+    builder: (context, state) => const ThemeChangerScreen(),
   ),
 ];

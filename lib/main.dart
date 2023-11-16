@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:triki_triki2/theme/app_theme.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:triki_triki2/config/router/app_router.dart';
+import 'package:triki_triki2/config/theme/app_theme.dart';
+import 'package:triki_triki2/presentation/providers/theme_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope (child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+Widget build(BuildContext context, WidgetRef ref) {
+    final AppTheme appTheme = ref.watch(themeNotifierProvider);
     return MaterialApp.router(
+      title: 'triki_triki2',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 2).getTheme(),
-     // home: const HomeScreen()
-    routerConfig: appRouter,
+      theme: appTheme.getTheme(),
+      routerConfig: appRouter,
     );
   }
 }

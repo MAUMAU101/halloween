@@ -14,18 +14,15 @@ class UiControlsScreen extends StatelessWidget with AppBarCustom {
   }
 }
 
-
-
-
 class _UiControlsView extends StatefulWidget {
   const _UiControlsView();
+
   @override
   State<_UiControlsView> createState() => _UiControlsViewState();
-
-
 }
 
 enum Transportation{car, plane, boat, submarine}
+
 class _UiControlsViewState extends State<_UiControlsView> {
 bool isDeveloper = true;
 Transportation selectedTransportation =Transportation.car;
@@ -40,6 +37,7 @@ Widget build(BuildContext context) {
     children: [
       SwitchListTile(
         title: const Text(' developerMode'),
+        subtitle: const Text('Controles adicionales'),
         value: isDeveloper,
         onChanged: (value) => setState((){
           isDeveloper = !isDeveloper;
@@ -61,7 +59,7 @@ Widget build(BuildContext context) {
         RadioListTile(
         title:  const Text('by boat'),
         subtitle: const Text('Viajar Por Barco'),
-        value: Transportation.car,
+        value: Transportation.boat,
         groupValue: selectedTransportation,
         onChanged: (value)=> setState(() {
         selectedTransportation=Transportation.boat;
@@ -70,7 +68,7 @@ Widget build(BuildContext context) {
                 RadioListTile(
         title:  const Text('by plane'),
         subtitle: const Text('Viajar Por Avion'),
-        value: Transportation.car,
+        value: Transportation.plane,
         groupValue: selectedTransportation,
         onChanged: (value)=> setState(() {
       selectedTransportation=Transportation.plane;
@@ -79,10 +77,10 @@ Widget build(BuildContext context) {
                 RadioListTile(
         title:  const Text('by Submarine'),
         subtitle: const Text('Viajar Por Submarino'),
-        value: Transportation.car,
+        value: Transportation.submarine,
         groupValue: selectedTransportation,
         onChanged: (value)=> setState(() {
-      selectedTransportation=Transportation.car;
+      selectedTransportation=Transportation.submarine;
   }),
             ),
           ],

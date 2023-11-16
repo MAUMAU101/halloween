@@ -4,7 +4,6 @@ import 'package:triki_triki2/presentation/widgets/widgets.dart';
 
 class AnimatedScreen extends StatefulWidget {
 static const screenName = 'animated_screen';
-
   const AnimatedScreen({super.key});
 
   @override

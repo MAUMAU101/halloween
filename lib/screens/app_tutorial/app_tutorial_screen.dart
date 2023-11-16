@@ -71,7 +71,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
           ),
           Positioned(
               right: 20,
-              top: 50,
+              top: 10,
               child: TextButton(
                 child: const Text('Salir'),
                 onPressed: () => context.pop(),
@@ -80,7 +80,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               ? Positioned(
                   bottom: 30,
                   right: 30,
-                  child: FadeInRight(
+                  child: FadeOutRight(
                     from: 15,
                     delay: const Duration(seconds: 1),
                     child: FilledButton(
@@ -88,7 +88,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
                       child: const Text('Comenzar'),
                     ),
                   ))
-              : const SizedBox()
+              : const SizedBox(),
         ],
       ),
     );
@@ -108,29 +108,27 @@ class _Slide extends StatelessWidget {
     final titleStyle = Theme.of(context).textTheme.titleLarge;
     final captionStyle = Theme.of(context).textTheme.bodySmall;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 300),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(image: AssetImage(imageUrl)),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              title,
-              style: titleStyle,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              caption,
-              style: captionStyle,
-            ),
-          ],
-        ),
+          Image(image: AssetImage(imageUrl)),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(title,
+          style: titleStyle,
+          ),
+          const SizedBox(
+            height: 20    ,
+          ),
+          Text(caption,
+          style: captionStyle,
+          ),
+        ],
+      ),
       ),
     );
   }

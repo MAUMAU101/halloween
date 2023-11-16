@@ -10,7 +10,8 @@ class MenuItem {
       {required this.title,
       required this.subTitle,
       required this.link,
-      required this.icon});
+      required this.icon
+  });
 }
 
 List<MenuItem> appMenuItems = <MenuItem>[
@@ -43,14 +44,14 @@ List<MenuItem> appMenuItems = <MenuItem>[
       const MenuItem(
         title: 'UI Controls + Tiles',
         subTitle: 'Una serie de controles de flutter',
-        link: '/ui-controles',
+        link: '/ui-control',
         icon: Icons.car_rental_outlined),
 
       const MenuItem(
         title: 'Introduccion a la aplicacion',
         subTitle: 'pequeño tutorial Introductorio',
         link: '/tutorial',
-        icon: Icons.access_alarm_rounded),
+        icon: Icons.accessible_rounded),
 
       const MenuItem(
         title: 'InfinateScroll y Pull',
